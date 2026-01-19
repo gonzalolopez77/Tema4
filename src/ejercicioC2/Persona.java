@@ -110,6 +110,8 @@ public class Persona {
 		} else {
 			System.out.println(persona2.getnombre() + " " + persona2.getapellidos() + " con DNI " + persona2.getDNI() + " no es mayor de edad");
 		}
+		
+		sc.close();
 	}
 
 }
