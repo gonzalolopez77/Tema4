@@ -79,6 +79,42 @@ public class Ejercicio01 {
 		this.nacionalidad = nacionalidad;
 	}
 	
+	//sacar dinero
+	public boolean sacarDinero (double cantidad) {
+		if(cantidad > 0 && saldo >= cantidad) {
+			saldo -= cantidad;
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	//meter dinero
+	public boolean meterDinero(double cantidad) {
+		if(cantidad > 0) {
+			saldo += cantidad;
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	@Override
+	public String toString() {
+		return "Nombre: " + nombre + 
+				 " DNI: " + dni +
+				 " Saldo " + saldo + " € " +
+				 " Nacionalidad " + nacionalidad;
+	}
+	
+	@Override
+	public boolean equals(Object objeto) {
+		if(this == objeto) return true;
+		if (objeto == null || getClass() != objeto.getClass()) return false;
+		Ejercicio01 otra = (Ejercicio01) objeto;
+		return dni.equalsIgnoreCase(otra.dni) && nombre.equalsIgnoreCase(otra.nombre);
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
