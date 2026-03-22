@@ -3,12 +3,12 @@ package pruebaExamen;
 public class Coche {
 
 	//Atributos de la clase
-	String matricula;
-	String modelo;
-	double precioPorDia;
-	double porcentaje;
-	static double precioSeguroDiario;
-	int diasAlquilado;
+	private String matricula;
+	private String modelo;
+	private double precioPorDia;
+	private double porcentaje;
+	private static double precioSeguroDiario;
+	private int diasAlquilado;
 	
 	//Getters y Setters
 	public String getMatricula() {
